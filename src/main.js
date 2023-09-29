@@ -31,9 +31,9 @@ const video = document.getElementById('video');
 // URL de videos
 const videoURLs = [
     'https://www.youtube.com/embed/gVUs4oFKJmY',
-    'https://www.youtube.com/embed/qVlr69RCQihnCT6G',
-    'https://www.youtube.com/embed/jmcOV3dm8Pqx4JyF',
-    'https://www.youtube.com/embed/YVBdkNXtGjo'
+    'https://www.youtube.com/embed/yAYSPq3C_vY',
+    'https://www.youtube.com/embed/An84VACW0Hw',
+    'https://www.youtube.com/embed/WMeqLdvCYog'
 ];
 
 // Cambiar video
