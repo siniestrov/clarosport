@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@300;500;600;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --black-g-color: black;
+    --white-g-color: white;
+    --red-g-color: red;
+    --gray-g-color: #1f1f1f;
+}
+
+body{
+    background-color: var(--black-g-color);
+    font-family: Exo;
+    color: var(--white-g-color);
+    text-align: center;  
+    text-transform: uppercase;
+}
+
+/*Header*/
+.contnav{
+    position: fixed;
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto auto;
+    background-color:var(--black-g-color);
+    border-bottom: 3px solid var(--red-g-color); 
+}
+
+.grid-h{
+    padding: 5px 0px;
+}
+
+/*Seccion cronometro-video*/
+.cont-major{
+    padding-top: 80px;
+    background-image: url('/img/background.jpg');
+    background-position: center 80px;
+    background-repeat: no-repeat;
+    height: 600px; 
+}
+
+.txt-h1{
+    font-weight: 800;
+    padding: 20px 0;
+}
+
+.cont-buttons{background-color: var(--gray-g-color);
+    height: 500px; 
+}
+
+/*Cronometro*/
+.cont-contador {
+        display: grid;
+        justify-content: center;
+}
+
+.contador {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--white-g-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .5);
+}
+
+.contador-item {
+    border: 2px solid var(--white-g-color);
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    font-weight: 800;
+}
+
+.contador-cifra {
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em;
+    padding: 10px 0 0 0;
+}
+
+.contador-etiqueta {
+    font-size: 1em;
+}
+
+
+/*Seccion botones*/
+.txt-t1{
+    font-weight: 300;
+    font-size: 2em;
+    padding: 50px 0;
+}
+
+.cont-grid-bottons{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, auto);
+}
+
+.grid-bottons{
+    padding: 0 10px;
+    font-size: .8em;
+}
+
+/*Footer*/
+.cont-footer{
+    height: 100px; 
+}
+
+/* Version responsive */
+@media (max-width: 768px) {
+    .contnav{
+        grid-template-columns: auto;
+    }
+}
+
+
+
+.botones {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.boton-activo {
+    background-color: #ffd700; /* Cambia el color del botón activo */
+}
+
+.seccion-de-videos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
