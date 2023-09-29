@@ -15,6 +15,11 @@
     --gray-g-color: #1f1f1f;
 }
 
+a {
+    text-decoration: none;
+    color: var(--white-g-color);
+}
+
 body{
     background-color: var(--black-g-color);
     font-family: Exo;
@@ -30,7 +35,8 @@ body{
     width: 100%;
     grid-template-columns: auto auto;
     background-color:var(--black-g-color);
-    border-bottom: 3px solid var(--red-g-color); 
+    border-bottom: 3px solid var(--red-g-color);
+    z-index: 1;
 }
 
 .grid-h{
@@ -40,10 +46,10 @@ body{
 /*Seccion cronometro-video*/
 .cont-major{
     padding-top: 80px;
-    background-image: url('/img/background.jpg');
+    background-image: url('../img/background.jpg');
     background-position: center 80px;
     background-repeat: no-repeat;
-    height: 600px; 
+    height: 650px; 
 }
 
 .txt-h1{
@@ -51,9 +57,7 @@ body{
     padding: 20px 0;
 }
 
-.cont-buttons{background-color: var(--gray-g-color);
-    height: 500px; 
-}
+
 
 /*Cronometro*/
 .cont-contador {
@@ -62,11 +66,12 @@ body{
 }
 
 .contador {
-    display: flex;
+    display: grid;
     align-items: center;
     gap: 10px;
     color: var(--white-g-color);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, .5);
+    grid-template-columns: repeat(4, auto);
 }
 
 .contador-item {
@@ -91,10 +96,13 @@ body{
 
 
 /*Seccion botones*/
+.cont-buttons{background-color: var(--gray-g-color);
+}
+
 .txt-t1{
     font-weight: 300;
-    font-size: 2em;
-    padding: 50px 0;
+    font-size:1.9em;
+    padding: 40px 0 20px 0;
 }
 
 .cont-grid-bottons{
@@ -104,45 +112,78 @@ body{
 }
 
 .grid-bottons{
-    padding: 0 10px;
+    padding: 0 0 50px 0;
     font-size: .8em;
 }
 
-/*Footer*/
-.cont-footer{
-    height: 100px; 
+.img-button{
+    width: 90%;
+    cursor: pointer;
+    transition: all .5s ease-in;
+    opacity: 1;
 }
+
+.boton-activo {
+    cursor:auto;
+    transition: all .5s ease-in;
+    opacity: 0.4;
+    
+}
+
+.seccion-de-videos {
+    padding: 20px 0;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 355px;
+    
+  
+}
+
+
+/*Footer*/
+.contfooter{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    grid-template-columns: repeat(3, 25%);
+}
+
+.grid-f{
+    padding: 5px 0px;
+}
+.txt-f{
+    font-size: .7em;
+    text-transform: none;
+}
+ .redes {
+    width: 30px;
+    padding: 0 4px;
+ }
+
+
 
 /* Version responsive */
 @media (max-width: 768px) {
     .contnav{
         grid-template-columns: auto;
     }
-}
+    .cont-major{
+        padding-top: 150px;
+        height: 100%;
+    }
 
-
-
-.botones {
-    text-align: center;
-    margin-top: 20px;
-}
-
-button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin: 5px;
-}
-
-.boton-activo {
-    background-color: #ffd700; /* Cambia el color del botón activo */
-}
-
-.seccion-de-videos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+    .contador {
+        grid-template-columns: repeat(2, auto);
+    }
+    .seccion-de-videos {
+        width: 80%;
+    }
+    .cont-grid-bottons{
+        grid-template-columns: repeat(2, auto);
+    }
+    .contfooter{
+        grid-template-columns: auto;
+    }
 }

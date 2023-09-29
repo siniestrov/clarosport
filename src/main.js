@@ -18,3 +18,57 @@ function actualizarContador() {
 
 actualizarContador();
 setInterval(actualizarContador, 1000);
+
+
+
+// Botones y video
+const btn1 = document.getElementById('btn1');
+const btn2 = document.getElementById('btn2');
+const btn3 = document.getElementById('btn3');
+const btn4 = document.getElementById('btn4');
+const video = document.getElementById('video');
+
+// URL de videos
+const videoURLs = [
+    'https://www.youtube.com/embed/gVUs4oFKJmY',
+    'https://www.youtube.com/embed/qVlr69RCQihnCT6G',
+    'https://www.youtube.com/embed/jmcOV3dm8Pqx4JyF',
+    'https://www.youtube.com/embed/YVBdkNXtGjo'
+];
+
+// Cambiar video
+function cambiarVideo(url) {
+    video.src = url;
+    actualizarBotonActivo(url);
+}
+
+// Actualizar el botón activo
+function actualizarBotonActivo(urlVideo) {
+    const botones = [btn1, btn2, btn3, btn4];
+    botones.forEach((boton) => {
+        boton.classList.remove('boton-activo');
+        if (videoURLs[botones.indexOf(boton)] === urlVideo) {
+            boton.classList.add('boton-activo');
+        }
+    });
+}
+
+// Eeventos de cada botones
+btn1.addEventListener('click', () => {
+    cambiarVideo(videoURLs[0]);
+});
+
+btn2.addEventListener('click', () => {
+    cambiarVideo(videoURLs[1]);
+});
+
+btn3.addEventListener('click', () => {
+    cambiarVideo(videoURLs[2]);
+});
+
+btn4.addEventListener('click', () => {
+    cambiarVideo(videoURLs[3]);
+});
+
+// Primer video por defecto
+cambiarVideo(videoURLs[0]);
